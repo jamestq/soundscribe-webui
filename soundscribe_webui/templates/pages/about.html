@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load static i18n compress%}
+
+{% block tabs %}
+  <div class="tabbed-nav" data-tabbed="" id="nav">
+    <div class="full-width">
+      <nav role="tablist">
+        <a href="#project" role="tab" data-current="" >Project</a><a href="#researchers" role="tab">Researchers</a>
+      </nav>
+    </div>
+    <div class="tab" id="project" role="tabpanel">
+      <div class="with-figure clearfix">
+        <section >
+          <h1 class="title">
+            Soundscribe WebUI
+          </h1>
+
+          <p>Information about this project</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="tab" id="researchers" role="tabpanel">
+      <section>
+        <h1 class="title">
+          Researchers
+        </h1>
+
+        <h2>Acknowledgments</h2>
+        <p>
+          This site was designed using the <a href='https://gitlab.unimelb.edu.au/mdap/cookiecutter-django-unimelb'>template</a> designed by 
+          <a href='https://findanexpert.unimelb.edu.au/profile/877006-robert-turnbull'>Robert Turnbull</a> and 
+          <a href='https://findanexpert.unimelb.edu.au/profile/551741-daniel-russo-batterham'>Dr Daniel Russo-Batterham</a>.
+          <a href="https://www.linkedin.com/in/jamesquang/">James Quang</a>
+        </p>
+
+      </section>
+    </div>
+  </div>
+{% endblock tabs %}
+

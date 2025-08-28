@@ -1,0 +1,17 @@
+# Docker PG Backup
+# https://github.com/kartoza/docker-pg-backup
+# ------------------------------------------------------------------------------
+
+POSTGRES_PASS=${POSTGRES_PASSWORD}
+
+# Add a number here to get the backup service to automatically delete files before a certain number of days
+REMOVE_BEFORE=90
+
+STORAGE_BACKEND=S3
+
+HOST_BASE=$(echo $DJANGO_AWS_S3_ENDPOINT_URL | sed "s/.*\/\///g")
+ACCESS_KEY_ID=${DJANGO_AWS_ACCESS_KEY_ID}
+SECRET_ACCESS_KEY=${DJANGO_AWS_SECRET_ACCESS_KEY}
+BUCKET=${DJANGO_AWS_STORAGE_BUCKET_NAME}
+DBLIST=${POSTGRES_DB}
+DUMP_ARGS=-Fp

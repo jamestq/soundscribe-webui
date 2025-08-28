@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}User Lists{% endblock %}
+
+{% block content %}
+<div class="container d-flex flex-column align-items-center">
+    {% for user in object_list %}
+        <li><a href="">{{ user }}</a></li>
+    {% endfor %}
+</div>
+{% endblock content %}
+

@@ -1,0 +1,35 @@
+volumes:
+  local_postgres_data: {}
+  local_postgres_data_backups: {}
+
+services:
+  webui: &webui
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+      ssh:
+      - default
+    image: soundscribe_webui_local_django
+    container_name: soundscribe_webui
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app:z      
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - "8001:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/local/postgres/Dockerfile
+    image: soundscribe_webui_local_postgres
+    container_name: soundscribe_postgres
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data:Z
+      - local_postgres_data_backups:/backups:z
+    env_file:
+      - ./.envs/.local/.postgres

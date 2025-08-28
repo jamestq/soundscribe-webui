@@ -1,0 +1,74 @@
+/* These styles are generated from project.scss. */
+
+.alert-debug {
+  color: black;
+  background-color: white;
+  border-color: #d6e9c6;
+}
+
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+label {
+  color: #b94a48;
+  font-size: 0.9rem;
+}
+
+.user-info {
+  text-align: right;
+  width: 100%;
+  padding: 10px;
+}
+
+.thumbnail {
+  width: 250px;
+}
+
+.sphinx a.headerlink {
+  font-size: 0.8em;
+  padding: 0 4px 0 4px;
+  text-decoration: none;
+  visibility: hidden;
+}
+.sphinx *:hover > a.headerlink { visibility: visible; }
+.sphinx a.reference { text-decoration: none; }
+.sphinx a.reference tt.literal {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+}
+.sphinx a.reference em { font-style: normal; }
+
+/* Smaller desc (default was 14px) and bold class name */
+.sphinx .descclassname { font-size: 13px; }
+.sphinx .descname { font-weight: bold; }
+
+.uomcontent [data-icon] {
+  height: 1.0rem !important;
+  width: 1.0rem !important;
+}
+
+.btn {
+  text-decoration: none  !important;
+}
+
+a.btn-outline-primary:hover {
+  background-color: #4074b2 !important;
+  color: white !important;
+}
+a.btn-primary {
+  color: white !important;
+}
+
+h2 a {
+  text-decoration: none  !important;
+}
+h2 a:hover {
+  text-decoration: underline  !important;
+}
+
+#content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,49 @@
+# General
+# ------------------------------------------------------------------------------
+# DJANGO_READ_DOT_ENV_FILE=True
+# DJANGO_SETTINGS_MODULE=config.settings.production
+# DJANGO_SECRET_KEY=SECRETY_KEY
+# DJANGO_ADMIN_URL=
+# DJANGO_ALLOWED_HOSTS=
+
+# Security
+# ------------------------------------------------------------------------------
+# TIP: better off using DNS, however, redirect is OK too
+# DJANGO_SECURE_SSL_REDIRECT=False
+
+# Email
+# ------------------------------------------------------------------------------
+# DJANGO_SERVER_EMAIL=
+
+
+# MinIO
+# ------------------------------------------------------------------------------
+# MINIO_ROOT_USER=MINIOUSER
+# MINIO_ROOT_PASSWORD=MINIOROOTPASSWORD
+# DJANGO_AWS_ACCESS_KEY_ID=$MINIO_ROOT_USER
+# DJANGO_AWS_SECRET_ACCESS_KEY=$MINIO_ROOT_PASSWORD
+# DJANGO_AWS_STORAGE_BUCKET_NAME=miniobucket
+# DJANGO_AWS_S3_ENDPOINT_URL=http://localhost:9000
+
+
+# django-allauth
+# ------------------------------------------------------------------------------
+# DJANGO_ACCOUNT_ALLOW_REGISTRATION=True
+
+# Gunicorn
+# ------------------------------------------------------------------------------
+# WEB_CONCURRENCY=4
+
+
+# Redis
+# ------------------------------------------------------------------------------
+# REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+# CELERY_FLOWER_USER=CELERYFLOWERUSER
+# CELERY_FLOWER_PASSWORD=CELERYPASSWORD
+
+

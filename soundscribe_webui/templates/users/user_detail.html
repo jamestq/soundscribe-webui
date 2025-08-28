@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}User: {{ object.username }}{% endblock %}
+
+{% block content %}
+<div class="container d-flex flex-column align-items-center">
+
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h2>{{ object.username }}</h2>
+      {% if object.name %}
+        <p>{{ object.name }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if object == request.user %}
+  <!-- Action buttons -->
+  <div class="row">
+    <div class="col-sm-12">
+      <a class="button btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
+      <a class="button btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
+      <!-- Your Stuff: Custom user template urls -->
+      <a class="button btn-primary" href="{% url 'soundscribe:asset-list' %}" role="button">Show audio assets</a>
+      {% if object.is_superuser %}  
+        <a class="button btn-warning" href="{% url 'users:user-manage' %}" role="button">Manage users</a>
+      {% endif %}
+      {% if perms.soundscribe.add_asset %}
+        <a class="button btn-primary" href="{% url 'soundscribe:asset-manage' %}" role="button">Manage audio assets</a>        
+      {% endif %}
+      {% if perms.soundscribe.view_asset %}
+        <a class="button btn-primary" href="{% url 'soundscribe:transcriptionfile-manage' %}" role="button">Manage Transcriptions</a>
+      {% endif %}
+  </div>
+
+  </div>
+  <!-- End Action buttons -->
+  {% endif %}
+
+
+</div>
+{% endblock content %}
+
