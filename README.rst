@@ -19,6 +19,11 @@ To install and run locally for the first time::
     chmod +x build_local.sh
     ./build_local.sh <your_github_ssh_key> build
 
+After building, to add the initial page assets::
+
+    chmod +x init_db.sh
+    ./init_db.sh
+
 .. end-quickstart
 
 
