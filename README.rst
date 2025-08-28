@@ -1,6 +1,9 @@
 Soundscribe WebUI
 ======================
 
+.. |docs badge| image:: https://github.com/jamestq/soundscribe-webui/actions/workflows/docs.yml/badge.svg
+    :target: https://jamestq.github.io/soundscribe-webui/
+
 A minimal web application with Soundscribe installed.
 
 :License: Apache Software License 2.0
