@@ -9,3 +9,11 @@ Welcome to Soundscribe WebUI documentation!
 .. include:: ../README.rst
    :start-after: start-badges
    :end-before: end-badges
+
+A minimal web application to deploy Soundscribe
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   quickstart
