@@ -29,24 +29,12 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install poetry
-      run: pipx install poetry
-
-    - name: Cache Poetry packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pypoetry
-        key: ${{ runner.os }}-poetry-${{ matrix.python-version }}
-        restore-keys: |
-          ${{ runner.os }}-poetry-
-
-    - name: Install dependencies
+    - name: Install sphinx
       run: |
-        poetry env use "${{ matrix.python-version }}"
-        poetry add sphinx==7.4.7
+        python -m pip install sphinx==7.4.7
 
     - name: Build Sphinx docs
-      run: poetry run sphinx-build -b html docs gh-pages    
+      run: sphinx-build -b html docs gh-pages    
 
     - name: Setup Pages
       uses: actions/configure-pages@v3
